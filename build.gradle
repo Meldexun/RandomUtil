@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+version = '1.12.2-1.0.0'
+group = 'meldexun.matrixutil'
+archivesBaseName = 'MatrixUtil'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+
+jar {
+    manifest.attributes([
+        'Built-By': 'Meldexun',
+        'Specification-Title': archivesBaseName,
+        'Specification-Version': version,
+        'Specification-Vendor': 'Meldexun',
+        'Implementation-Title': archivesBaseName,
+        'Implementation-Version': version,
+        'Implementation-Vendor': 'Meldexun',
+        'Implementation-Timestamp': new Date().format("yyyy-MM-dd HH:mm:ss")
+    ])
+}
